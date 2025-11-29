@@ -9,6 +9,7 @@ message digest algorithm.
 - Submission template: [doc/ChecksumVerificationTemplate.md](doc/ChecksumVerificationTemplate.md)
 - Protecting sensitive data reading: [doc/ProtectingSensitiveData.md](doc/ProtectingSensitiveData.md)
 - Changelog: [doc/CHANGELOG.md](doc/CHANGELOG.md)
+- Architecture decision records: [doc/adrs/](doc/adrs/)
 - Quick links index: [index.md](index.md)
 
 ## Run locally

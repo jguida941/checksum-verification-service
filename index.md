@@ -9,6 +9,7 @@ Quick links for the assignment assets in this repository:
   [src/main/java/com/snhu/app/Checksum.java](src/main/java/com/snhu/app/Checksum.java)
 - Project configuration: [pom.xml](pom.xml)
 - Reading: [doc/ProtectingSensitiveData.md](doc/ProtectingSensitiveData.md)
+- ADRs: [doc/adrs/](doc/adrs/)
 
 Usage reminders:
 

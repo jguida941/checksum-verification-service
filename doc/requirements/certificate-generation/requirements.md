@@ -18,7 +18,7 @@ document the outputs.
   - Ensure Java/JDK is installed so `keytool` is available (no extra install).
   - Find your Java home to locate `keytool`/`keytool.exe`.
 
-## Commands to Run (update the password values)
+## Commands to Run (macOS/Linux; update the password values)
 
 Generate a 2048-bit RSA key pair and self-signed certificate (valid 360 days):
 
@@ -43,7 +43,8 @@ keytool -printcert -file server.cer
 Notes:
 
 - Replace `<password>` with a unique, secure password (used consistently for
-  keypass and storepass).
+  keypass and storepass). Example placeholder: `ExamplePass123!` (do not use in
+  production).
 - On Windows, the command may appear as `keytool.exe ...`; syntax is otherwise
   the same.
 

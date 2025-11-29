@@ -23,14 +23,14 @@ document the outputs.
 Generate a 2048-bit RSA key pair and self-signed certificate (valid 360 days):
 
 ```sh
-keytool -genkey -keyalg RSA -alias selfsigned -keypass <password> \
-  -keystore keystore.jks -storepass <password> -validity 360 -keysize 2048
+keytool -genkey -keyalg RSA -alias selfsigned -keypass '<password>' \
+  -keystore keystore.jks -storepass '<password>' -validity 360 -keysize 2048
 ```
 
 Export the certificate to `server.cer`:
 
 ```sh
-keytool -export -alias selfsigned -storepass <password> \
+keytool -exportcert -alias selfsigned -storepass '<password>' \
   -file server.cer -keystore keystore.jks
 ```
 
@@ -44,9 +44,10 @@ Notes:
 
 - Replace `<password>` with a unique, secure password (used consistently for
   keypass and storepass). Example placeholder: `ExamplePass123!` (do not use in
-  production).
-- On Windows, the command may appear as `keytool.exe ...`; syntax is otherwise
-  the same.
+  production). Quote the password if it contains characters like `!` to avoid
+  shell history expansion.
+- On Windows, the command may appear as `keytool.exe ...`; `-exportcert` is the
+  recommended flag on newer JDKs.
 
 ## Evidence to Capture
 

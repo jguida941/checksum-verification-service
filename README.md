@@ -40,16 +40,17 @@ certificates with Java Keytool.
   [doc/requirements/certificate-generation/requirements.md](doc/requirements/certificate-generation/requirements.md)
 - Summary: use Java Keytool to generate a 2048-bit RSA self-signed certificate,
   export it to `server.cer`, and print the certificate details for verification.
-- MacOS/Linux example (replace with your own secure password, e.g.,
-  `ExamplePass123!`):
+- macOS/Linux example (replace with your own secure password):
 
   ```sh
-  keytool -genkey -keyalg RSA -alias selfsigned -keypass ExamplePass123! \
-    -keystore keystore.jks -storepass ExamplePass123! -validity 360 -keysize 2048
-  keytool -export -alias selfsigned -storepass ExamplePass123! \
-    -file server.cer -keystore keystore.jks
+  keytool -genkey -keyalg RSA -alias selfsigned \
+    -keypass 'ExamplePass123!' \
+    -keystore keystore.jks -storepass 'ExamplePass123!' \
+    -validity 360 -keysize 2048
+
+  keytool -exportcert -alias selfsigned \
+    -keystore keystore.jks -storepass 'ExamplePass123!' \
+    -file server.cer
+
   keytool -printcert -file server.cer
-  # Alternative macOS export form:
-  keytool -exportcert -alias selfsigned -keystore keystore.jks \
-    -storepass ExamplePass123! -file server.cer
   ```

@@ -10,6 +10,9 @@ All notable changes to this project are documented here.
   autolaunch usage in the README.
 - Wrapped and refreshed the submission template with clear placeholders and a
   repository-friendly screenshot link location.
+- Moved checksum requirements to `doc/requirements/checkSum-Verification/` and
+  added certificate-generation requirements under
+  `doc/requirements/certificate-generation/`.
 - Updated `/hash` endpoint response to clearly show data, cipher algorithm name,
   and checksum value; documented run/endpoint usage in README.
 - Recorded ADR 0001 capturing the decision to use SHA-256 for checksum

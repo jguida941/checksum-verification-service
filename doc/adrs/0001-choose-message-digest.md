@@ -39,7 +39,8 @@ use case. MD5 and SHA-1 are excluded due to known collision vulnerabilities.
 
 ## References
 
-- Assignment requirements: `doc/requirements/requirements.md`
+- Assignment requirements:
+  `doc/requirements/checkSum-Verification/requirements.md`
 - Recommendation text: `doc/templates/ChecksumVerificationTemplate.md`
 - Implementation: `src/main/java/com/snhu/sslserver/ServerApplication.java`
   (`/hash` endpoint using SHA-256)

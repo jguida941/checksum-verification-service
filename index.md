@@ -3,7 +3,9 @@
 Quick links for the assignment assets in this repository:
 
 - Requirements:
-  [doc/requirements/requirements.md](doc/requirements/requirements.md)
+  [doc/requirements/checkSum-Verification/requirements.md](doc/requirements/checkSum-Verification/requirements.md)
+- Certificate generation requirements:
+  [doc/requirements/certificate-generation/requirements.md](doc/requirements/certificate-generation/requirements.md)
 - Submission template:
   [doc/templates/ChecksumVerificationTemplate.md](doc/templates/ChecksumVerificationTemplate.md)
 - Source code entry point:

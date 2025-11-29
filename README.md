@@ -54,3 +54,41 @@ certificates with Java Keytool.
 
   keytool -printcert -file server.cer
   ```
+
+- Sample interactive output (placeholder values shown):
+
+  ```
+  Enter the distinguished name. Provide a single dot (.) to leave a sub-component empty or press ENTER to use the default value in braces.
+  What is your first and last name?
+    [Unknown]:  localhost
+  What is the name of your organizational unit?
+    [Unknown]:  ExampleOU
+  What is the name of your organization?
+    [Unknown]:  ExampleOrg
+  What is the name of your City or Locality?
+    [Unknown]:  ExampleCity
+  What is the name of your State or Province?
+    [Unknown]:  EX
+  What is the two-letter country code for this unit?
+    [Unknown]:  US
+  Is CN=localhost, OU=ExampleOU, O=ExampleOrg, L=ExampleCity, ST=EX, C=US correct?
+    [no]:  yes
+
+  Generating 2048-bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 360 days
+          for: CN=localhost, OU=ExampleOU, O=ExampleOrg, L=ExampleCity, ST=EX, C=US
+  ```
+
+- Sample `keytool -printcert -file server.cer` output (placeholders):
+
+  ```
+  Owner: CN=localhost, OU=ExampleOU, O=ExampleOrg, L=ExampleCity, ST=EX, C=US
+  Issuer: CN=localhost, OU=ExampleOU, O=ExampleOrg, L=ExampleCity, ST=EX, C=US
+  Serial number: 1234567890abcdef
+  Valid from: Mon Jan 01 00:00:00 EST 2025 until: Tue Dec 31 00:00:00 EST 2025
+  Certificate fingerprints:
+           SHA1: AA:BB:CC:DD:...:ZZ
+           SHA256: 11:22:33:44:...:FF
+  Signature algorithm name: SHA384withRSA
+  Subject Public Key Algorithm: 2048-bit RSA key
+  Version: 3
+  ```
